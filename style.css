@@ -418,6 +418,10 @@ footer {
     font-size: 18px;
     transition: all 0.5s ease 0s;
 }
+.form-input._error {
+    box-shadow: 0 0 15px red;
+}
+
 .form-input:focus {
     box-shadow: 0 0 15px #7a956b;
 }
@@ -436,13 +440,11 @@ textarea.form-input {
 .checkbox-input {
     display: none;
 }
-.form-input._error {
-    box-shadow: 0 0 15px red;
-}
-.checkbox-input:checked {
-    transform: scale(1);
 
+.checkbox-input:checked + .checkbox-label::after {
+    transform: scale(1);
 }
+
 .checkbox-label {
     font-size: 16px;
     line-height: 140%;
@@ -451,6 +453,7 @@ textarea.form-input {
     position: relative;
     cursor: pointer;
 }
+
 .checkbox-label::before {
     content: "";
     flex: 0 0 24px;
