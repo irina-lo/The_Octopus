@@ -362,10 +362,6 @@ footer {
 }
 
 /*------------------------------------------form--------------------------------*/
-.form-body {
-    background-color: burlywood;
-    height: 100%;
-}
 .form {
     background-color: burlywood;
     padding-top: 10%;
@@ -376,9 +372,28 @@ footer {
 .form *{
     outline: none;
 }
+
 .form-body {
+    background-color: burlywood;
+    height: 100%;
     position: relative;
 }
+
+.form-body::after { 
+    content: '';
+    position: absolute;
+    top: 0;
+    left:0;
+    background: rgba(51, 51, 51, 0.8) url(../images/loading.gif) center / 50px no-repeat;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+}
+.form-body._sending::after {
+    opacity: 1;
+    visibility: visible;
+}
+
 .form-body::after {
     content: '';
     position: absolute;

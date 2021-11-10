@@ -16,16 +16,30 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (error === 0) {
 
-        form.classList.add('_sending');
+        form.classList.add('_sending'); // doesn't work! needs to be fixed
 
-        let  response = await fetch('sendmail.php')
+        let  response = await fetch('sendmail.php', {
+            method: 'POST',
+            body: formData
+
+        });
+        if (response.ok) {
+            let result = await response.json ();
+            alert(result.message);
+            form.reset();
+            form.classList.remove('_sending');
+        }
+        else {
+            alert("Ooops!..");
+            form.classList.remove('_sending');
+        }
 
     } 
 
     
     else {
 
-        alert('Please, fill in the required fields');
+        alert('Please, fill out the required fields');
 
     }
 
@@ -56,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 }
 
-            } 
+            }  
 
             else {
 
@@ -98,5 +112,7 @@ document.addEventListener('DOMContentLoaded', function () {
         return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
 
     }
+
+    //function for the checkbox
 
 });
