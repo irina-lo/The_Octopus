@@ -15,6 +15,8 @@ html, body {
     display: flex;
     flex-direction: column;
 }
+/*----------------------------------------------------------------------------*/
+
 .container {
     max-width: 90%;
     margin: 0px auto;
@@ -153,7 +155,7 @@ html, body {
         margin: 0 0 20px 0;
     }
 
-/*--------------------------APPROACH "MOBILE FIRST"--------------------------*/
+
 
 @media (min-width:767px) { 
     .header-burger {
@@ -279,7 +281,6 @@ footer {
 .dish-box {
     display: flex;
     margin: 10px;
-    /*flex: 0 1 50%;*/
 
 }
 .dish-image {
@@ -299,6 +300,7 @@ footer {
 .dish-image > p {
     text-align: center;
     color: white;
+    padding-bottom: 3px;
 }
 .gallery-text {
     text-align:justify;
@@ -349,7 +351,7 @@ footer {
      text-align: center;
  }
  
- .gallery-two-column{
+.gallery-two-column{
      flex:0 1 46%
  }
 .gallery-three-column {
@@ -520,3 +522,93 @@ textarea.form-input {
 }
 
 
+/*--------------------------------- MENU ---------------------------------*/
+
+.menu {
+    max-width: 90%;
+    margin: 70px auto 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex: 1 1 auto;
+    margin: 70px auto 0;
+}
+
+.menu-box {
+    display: flex;
+    margin-top: 20px;
+    background-color: black;
+    color: white;
+    width: 85%;
+    justify-content: center;
+    padding: 5% 0 5% 0;
+    border-radius: 15px;
+}
+
+.menu-content > h4 {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.menu-text {
+    text-align: justify;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+#menu-header {
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    font-weight: 900;
+}
+
+.menu-list {
+    font-size: 14px;
+    line-height: 1.5rem;
+}
+.menu-list > ul > li{
+list-style-type: none;
+}
+
+@media (min-width:768px) {
+    #menu-header {
+        margin-top: 40px;
+    }
+    .menu-text {
+        font-size: 20px;
+    }
+    .menu-box {
+        margin-top: 30px;
+        width: 60%;
+    }
+    
+    .menu-content > h4 {
+        text-shadow: 2px 1px darkgreen;
+        font-size: 20px;
+        font-weight: 700;
+    }
+    .menu-list {
+        font-size: 17px;
+        line-height: 2.2rem;
+    }
+}
+@media (min-width:1024px) {
+    .menu-box {
+        width: 70%;
+    }
+  .menu-text {
+      font-size: 24px;
+  }
+ .menu-content > h4 {
+     font-size: 36px;
+     font-weight: 800;
+     text-shadow: 3px 1px darkgreen;
+ }
+
+  .menu-list {
+      font-size: 30px;
+      line-height: 3rem;
+  }
+}
