@@ -139,7 +139,7 @@ html, body {
         top:-100%;
         left: 0;
         width: 100%;
-        height: 230px;
+        height: 100%;
         background-color:rgb(43, 38, 54);
         padding: 70px 10px 20px 10px;
         transition: all 0.3s ease 0s;
@@ -153,27 +153,13 @@ html, body {
     }
     .header-list li {
         margin: 0 0 20px 0;
+        width: 100%;
+        text-align: center;
     }
-
-
-
-@media (min-width:767px) { 
-    .header-burger {
-        display: none;
+    .header-list li:hover {
+        background-color: rgb(126, 127, 167);
+        border-radius: 10px;
     }
-    .header-menu.active {
-        display: none;
-    }
-    .header-body {
-        height: 80px; 
-    }
-    .header-logo {
-        flex: 0 0 70px;
-    }
-    .content {
-        padding: 100px 0 0 0; 
-    };
-}
 
 /*-----------------------------NAVIGATION-END-----------------------------*/
 
@@ -225,18 +211,7 @@ footer {
     text-transform: uppercase;
     font-size: 18px;
 }
-@media (min-width: 768px) {
-   .index-row {
-    flex-direction: row;
-    align-items:stretch;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-    text-align: center;
-}
-.container > h2 {
-    font-size: 22px;
-}
-}
+
     
 .index-row > h2 {
     text-transform: uppercase;
@@ -267,7 +242,7 @@ footer {
     width: 90%;
     text-align:center;
 }
-/*--------------------------------GALLERY-------------------------*/
+/*-------------------------------- GALLERY -------------------------------*/
 .dishes {
     max-width: 90%;
     margin: 80px auto 0;
@@ -320,53 +295,10 @@ footer {
 
 }
 
-@media (min-width: 768px) {
-    .dishes {
-     flex-direction: row;
-     justify-content: space-around;
-     text-align: center;
- }
- .dish-box{
-     flex:0 0 42%
- }
- .dish-image {
-    flex: 0 1 auto; /*------------------------------*/
-}
-.gallery-text {
-    padding-top: 35px;
-}
-.gallery-text > h3 {
-    font-size:24px;
-    padding-bottom: 15px;
-}
-.gallery-text > p {
-    font-size: 17px;
-}
- 
-}
-@media (min-width: 1024px) {
-    .dishes {
-     flex-direction: row;
-     justify-content: center;
-     text-align: center;
- }
- 
-.gallery-two-column{
-     flex:0 1 46%
- }
-.gallery-three-column {
-    flex: 0 1 30% ;
-}
-.dish-image {
-    flex: 0 1 auto;
-}
- 
-}
-
-/*------------------------------------------form--------------------------------*/
+/*------------------------------------ form --------------------------------*/
 .form {
     background-color: burlywood;
-    padding-top: 10%;
+    padding-top: 10%; /********************************/
     max-width: 70%;
     margin: 0 auto;
     color: brown;
@@ -374,13 +306,11 @@ footer {
 .form *{
     outline: none;
 }
-
 .form-body {
     background-color: burlywood;
     height: 100%;
     position: relative;
 }
-
 .form-body::after { 
     content: '';
     position: absolute;
@@ -395,7 +325,6 @@ footer {
     opacity: 1;
     visibility: visible;
 }
-
 .form-body::after {
     content: '';
     position: absolute;
@@ -412,7 +341,6 @@ footer {
     visibility: visible;
     transition: all 0.5s ease 0s;
 }
-
 .form-title {
     font-size: 40px;
     font-weight: 700;
@@ -438,7 +366,6 @@ footer {
 .form-input._error {
     box-shadow: 0 0 15px red;
 }
-
 .form-input:focus {
     box-shadow: 0 0 15px #7a956b;
 }
@@ -448,20 +375,17 @@ textarea.form-input {
     padding:10px;
 }
 
-/*------------------------------CSS checkbox ---------------*/
+/*------------------------------ CSS checkbox -----------------------------*/
 
 .checkbox {
 
 }
-
 .checkbox-input {
     display: none;
 }
-
 .checkbox-input:checked + .checkbox-label::after {
     transform: scale(1);
 }
-
 .checkbox-label {
     font-size: 16px;
     line-height: 140%;
@@ -470,7 +394,6 @@ textarea.form-input {
     position: relative;
     cursor: pointer;
 }
-
 .checkbox-label::before {
     content: "";
     flex: 0 0 24px;
@@ -481,7 +404,6 @@ textarea.form-input {
     border-radius: 4px;
     margin:0 10px 0 0;
 }
-
 .checkbox-label::after {
     content: "";
     width:16px;
@@ -495,7 +417,7 @@ textarea.form-input {
     transition: transform 0.5 ease 0s;
 
 }
-/*-------------------------------CSS checkbox END (uncomplete)--------------*/
+/*--------------------------- CSS checkbox END -----------------------*/
 
 .form-button {
     width: 100%;
@@ -518,7 +440,7 @@ textarea.form-input {
     background-color: #4f6146;
 }
 .form-button:active {
-    top:3px;
+    top:0;
 }
 
 
@@ -563,7 +485,6 @@ textarea.form-input {
     padding-bottom: 10px;
     font-weight: 900;
 }
-
 .menu-list {
     font-size: 14px;
     line-height: 1.5rem;
@@ -572,7 +493,71 @@ textarea.form-input {
 list-style-type: none;
 }
 
-@media (min-width:768px) {
+
+/* -------------------------- viewport 768px and higher -------------------------- */
+
+@media (min-width:768px) { 
+
+    /* --------------------------- navigation --------------------------- */
+
+    .header-burger {
+        display: none;
+    }
+    .header-menu.active {
+        display: none;
+    }
+    .header-body {
+        height: 80px; 
+    }
+    .header-logo {
+        flex: 0 0 70px;
+    }
+    .content {
+        padding: 100px 0 0 0; 
+    }
+    .header-list {
+        z-index: 6;
+    }
+   
+    /*-------------------------- three columns - index file ------------------*/
+
+    .index-row {
+     flex-direction: row;
+     align-items:stretch;
+     flex-wrap: nowrap;
+     justify-content: space-around;
+     text-align: center;
+    }
+    .container > h2 {
+     font-size: 22px;
+    }
+
+    /* ------------------------------ gallery file ---------------------------- */
+
+    .dishes {
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+    }
+    .dish-box{
+    flex:0 0 42%
+    }
+    .dish-image {
+    flex: 0 1 auto;
+    }
+    .gallery-text {
+     padding-top: 35px;
+    }
+    .gallery-text > h3 {
+    font-size:24px;
+    padding-bottom: 15px;
+    }
+    .gallery-text > p {
+    font-size: 17px;
+    }
+
+    /*------------------------------- menu file ----------------------------- */
+
     #menu-header {
         margin-top: 40px;
     }
@@ -583,7 +568,6 @@ list-style-type: none;
         margin-top: 30px;
         width: 60%;
     }
-    
     .menu-content > h4 {
         text-shadow: 2px 1px darkgreen;
         font-size: 20px;
@@ -594,21 +578,40 @@ list-style-type: none;
         line-height: 2.2rem;
     }
 }
-@media (min-width:1024px) {
-    .menu-box {
-        width: 70%;
-    }
-  .menu-text {
-      font-size: 24px;
-  }
- .menu-content > h4 {
-     font-size: 36px;
-     font-weight: 800;
-     text-shadow: 3px 1px darkgreen;
- }
 
-  .menu-list {
-      font-size: 30px;
-      line-height: 3rem;
-  }
+ /* ----------------------- viewport 1024px and higher ----------------------- */
+
+@media (min-width: 1024px) {
+    /* ---------------------------- gallery file --------------------------- */
+    .dishes {
+     flex-direction: row;
+     justify-content: center;
+     text-align: center;
+    }
+    .gallery-two-column{
+     flex:0 1 46%
+    }
+    .gallery-three-column {
+    flex: 0 1 30% ;
+    }
+    .dish-image {
+    flex: 0 1 auto;
+    }
+    /*---------------------------------- menu file ---------------------------*/
+    .menu-box {
+    width: 70%;
+    }
+    .menu-text {
+    font-size: 24px;
+    }
+    .menu-content > h4 {
+    font-size: 36px;
+    font-weight: 800;
+    text-shadow: 3px 1px darkgreen;
+    }
+    .menu-list {
+    font-size: 30px;
+    line-height: 3rem;
+    }
+ 
 }
