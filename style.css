@@ -8,14 +8,15 @@
 }
 html, body {
     height: 100%;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serifgi;
 }
 .main-container {
     min-height: 100%;
     display: flex;
     flex-direction: column;
 }
-/*----------------------------------------------------------------------------*/
+
+/*------------------------------- index file ------------------------------------*/
 
 .container {
     max-width: 90%;
@@ -31,7 +32,7 @@ html, body {
     line-height: 25px;
 }
 
-/*-----------------------------NAVIGATION-----------------------------*/
+/*-------------------------------- NAVIGATION ----------------------------------*/
 
 .header {
     position: fixed;
@@ -129,7 +130,7 @@ html, body {
         top: 9px;
         transition: all 0.3s ease 0s;
     } 
-    /*-----------------------------HUMBURGER-MENU-END-----------------------------*/
+/*------------------------------ HUMBURGER-MENU-END -----------------------------*/
 
     body.lock {
         overflow: hidden;
@@ -163,7 +164,6 @@ html, body {
 
 /*-----------------------------NAVIGATION-END-----------------------------*/
 
-
 .restaurant {
         display: flex;
         width: 100%;
@@ -173,7 +173,6 @@ html, body {
         border-radius: 25px;
         opacity: 0.4;
     }
-
 footer {
     display: flex;
     flex-direction: row;
@@ -185,13 +184,12 @@ footer {
     font-family: Arial, Helvetica, sans-serif;
     margin-top: 30px;
 }
-
-.content-text > h1 {
-    margin-top: 8px;
+.content-text > h4 {
+    margin-top: 5px;
 }
-
 .content-text > p {
-    margin: 12px 0px 10px 5px;
+    margin: 5px 0px 10px 0;
+    font-size: 15px;
 }
 
 /*---------------------------three columns - index file-------------------------*/
@@ -199,7 +197,7 @@ footer {
 .index-row {
     display: flex;
     flex-direction: column;
-    border: 8px solid black;
+    border: 4px solid black;
     border-radius: 20px;
     margin: 20px 10px;
     justify-content: space-around;
@@ -209,10 +207,9 @@ footer {
     text-align: center;
     margin-top: 20px;
     text-transform: uppercase;
-    font-size: 18px;
-}
-
-    
+    font-size: 12px;
+    font-weight: 800;
+}  
 .index-row > h2 {
     text-transform: uppercase;
     font-weight: 600;
@@ -225,24 +222,24 @@ footer {
     border-radius: 10px;
     flex: 0 1 50%;
 }
-
 .index-column-item {
     padding: 15px;
     color: black;
     text-align:center;
     font-size: 14px;
-    justify-content: stretch;
 }
 .index-column-item > h4 {
     text-transform: uppercase;
     margin-bottom: 9px;
+    text-align: center;
 }
 .index-column-item-text {
     margin: 0 auto;
     width: 90%;
-    text-align:center;
+    text-align:justify;
 }
 /*-------------------------------- GALLERY -------------------------------*/
+
 .dishes {
     max-width: 90%;
     margin: 80px auto 0;
@@ -296,27 +293,27 @@ footer {
 }
 
 /*------------------------------------ form --------------------------------*/
-.form {
+.form-container {
     background-color: burlywood;
-    padding-top: 10%; /********************************/
-    max-width: 70%;
-    margin: 0 auto;
-    color: brown;
+    height: 100%;
 }
 .form *{
     outline: none;
 }
-.form-body {
+.form {
     background-color: burlywood;
-    height: 100%;
-    position: relative;
+    padding-top: 30px;
+    max-width: 70%;
+    margin: 0 auto;
+    color: brown;
 }
 
-.form-body._sending::after {
-    opacity: 1;
-    visibility: visible;
+/*--------------------------------- sending form --------------------------------*/
+
+.form-box {
+    position: relative;
 }
-.form-body::after {
+.form-box::after {
     content: '';
     position: absolute;
     top:0;
@@ -326,24 +323,34 @@ footer {
     background: rgba(51, 51, 51, 0.9) url('../images/loading.gif') center / 50px no-repeat;
     opacity: 0;
     visibility: hidden;
+    transition: all 0.5s ease 0s;
 }
-.form-body._sending::after {
+.form-box._sending::after { 
+    opacity: 1;
+    visibility: visible;
+}
+
+.form-box._sending::after {
     opacity: 1;
     visibility: visible;
     transition: all 0.5s ease 0s;
 }
+
+/*--------------------------------------------------------*/
 .form-title {
-    font-size: 40px;
-    font-weight: 700;
+    font-size: 30px;
+    font-weight: 800;
     margin: 50px 0 30px 0;
     text-transform: uppercase;
     text-align: center;
+    letter-spacing: 0.1rem;
 }
 .form-item {
     margin: 0 0 20px 0;
 }
 .form-label {
     font-size: 18px;
+    display: block;
     margin: 0 0 10px 0;
 }
 .form-input {
@@ -368,9 +375,6 @@ textarea.form-input {
 
 /*------------------------------ CSS checkbox -----------------------------*/
 
-.checkbox {
-
-}
 .checkbox-input {
     display: none;
 }
@@ -405,7 +409,7 @@ textarea.form-input {
     background-color: #7a956b;
     border-radius: 4px;
     transform: scale(0);
-    transition: transform 0.5 ease 0s;
+    transition: transform 0.5s ease 0s;
 
 }
 /*--------------------------- CSS checkbox END -----------------------*/
@@ -431,11 +435,35 @@ textarea.form-input {
     background-color: #4f6146;
 }
 .form-button:active {
-    top:0;
+    top:3px;
 }
+.exit {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 30px;
+    background-color: gray;
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 10px;
+    letter-spacing: 1.4px;
+    position: relative;
+    top:0;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background-color 0.5s ease 0s;
+    position: relative;
+    top:0;
+    }
+.exit:hover {
+    background-color: rgb(75, 75, 75);
+    top:3px;
+    }
 
-
-/*--------------------------------- MENU ---------------------------------*/
+/*------------------------------------ MENU ------------------------------------*/
 
 .menu {
     max-width: 90%;
@@ -485,7 +513,7 @@ list-style-type: none;
 }
 
 
-/* -------------------------- viewport 768px and higher -------------------------- */
+/* -------------------------- viewport 768px - 1024px -------------------------- */
 
 @media (min-width:768px) { 
 
@@ -522,6 +550,13 @@ list-style-type: none;
     .content {
         padding: 100px 0 0 0; 
     }
+    .content-text  > h4 {
+        font-size: 28px;
+    }
+    .content-text  > p {
+        font-size: 22px;
+        line-height: 3rem;
+    }
    
     /*-------------------------- three columns - index file ------------------*/
 
@@ -532,8 +567,14 @@ list-style-type: none;
      justify-content: space-around;
      text-align: center;
     }
+    .index-column-item > h4 {
+        font-size: 18px;
+        font-weight: 700;
+    }
     .container > h2 {
      font-size: 22px;
+     font-weight: 800;
+     letter-spacing: 0.1rem;
     }
 
     /* ------------------------------ gallery file ---------------------------- */
@@ -593,6 +634,31 @@ list-style-type: none;
         margin-left: 80px;
         }
 
+    /*----------------------------- index file ------------------------------*/
+
+    .content-text {
+        padding: 10px 0 10px 0;
+        line-height: 2.4rem;
+    }
+    .content-text  > h4 {
+        font-size: 32px;
+        font-weight: 800;
+        letter-spacing: 0.15rem;
+    }
+    .content-text  > p {
+        font-size: 26px;
+    }
+    .container > h2 {
+        font-size: 24px;
+        letter-spacing: 0.15rem;
+       }
+       
+     /*---------------------- three columns - index file ---------------------*/
+
+       .index-column-item-text {
+        font-size: 15px;
+    }
+
     /* ---------------------------- gallery file --------------------------- */
 
     .dishes {
@@ -610,7 +676,7 @@ list-style-type: none;
     flex: 0 1 auto;
     }
 
-    /*---------------------------------- menu file ---------------------------*/
+    /*------------------------------- menu file ------------------------------*/
 
     .menu-box {
     width: 70%;
@@ -627,5 +693,13 @@ list-style-type: none;
     font-size: 26px;
     line-height: 3rem;
     }
+
+    /*--------------------------- contact form ------------------------*/
  
+    form {
+        max-width: 60%;
+        margin: 0 auto;
+        padding-top: 80px;
+    }
 }
+  

@@ -9,7 +9,7 @@
         <script src="contactUs.js"></script>
     </head>
     <body>
-        <div class="form-body">
+        <div class="form-container">
             <div class="form">
                 <form action="#" id="form" class="form-box">
                     <h1 class="form-title">Contact Us</h1>
@@ -27,13 +27,19 @@
                     </div>
                     <div class="form-item">
                         <div class="checkbox">
-                        <input id="formComplaint?" type="checkbox" name="Complaint?" class="checkbox-input _req">
-                        <label for="formComplaint?" class="checkbox-label">
+                        <input id="formComplaint" type="checkbox" name="complaint" class="checkbox-input">
+                        <label for="formComplaint" class="checkbox-label">
                             <span>Is your message a complaint?</span>
                         </label>
                     </div>
                     </div>
-                    <button type="submit" class="form-button">Send your message</button>
+                    <div class="form-item">
+                        <button type="submit" class="form-button">Send your message</button>
+                    </div>
+                        <div class="form-item">
+                        <a class="exit" href="index.html">exit</a>
+                    </div>
+
                 </form>
             </div>
         </div>   
