@@ -8,7 +8,7 @@
 }
 html, body {
     height: 100%;
-    font-family: Arial, Helvetica, sans-serifgi;
+    font-family: Arial, Helvetica, sans-serif;
 }
 .main-container {
     min-height: 100%;
@@ -162,7 +162,7 @@ html, body {
         border-radius: 10px;
     }
 
-/*-----------------------------NAVIGATION-END-----------------------------*/
+/*------------------------------- NAVIGATION-END -----------------------------*/
 
 .restaurant {
         display: flex;
@@ -186,6 +186,7 @@ footer {
 }
 .content-text > h4 {
     margin-top: 5px;
+    font-weight: 800;
 }
 .content-text > p {
     margin: 5px 0px 10px 0;
@@ -207,7 +208,7 @@ footer {
     text-align: center;
     margin-top: 20px;
     text-transform: uppercase;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 800;
 }  
 .index-row > h2 {
@@ -226,18 +227,20 @@ footer {
     padding: 15px;
     color: black;
     text-align:center;
-    font-size: 14px;
+    font-size: 12px;
 }
 .index-column-item > h4 {
     text-transform: uppercase;
     margin-bottom: 9px;
     text-align: center;
+    font-weight: 700;
 }
 .index-column-item-text {
     margin: 0 auto;
     width: 90%;
     text-align:justify;
 }
+
 /*-------------------------------- GALLERY -------------------------------*/
 
 .dishes {
@@ -261,13 +264,16 @@ footer {
     background-color: black;
     text-align: center;
     border-radius: 10px;
-   
+    float: left;
+
 }
 .dish-image > img {
     max-width: 95%;
     justify-content: center;
     align-items: center;
-    padding-top:12px;
+    padding-top:10px;
+    height: 90%;
+    object-fit: cover;
 }
 .dish-image > p {
     text-align: center;
@@ -279,14 +285,12 @@ footer {
     padding: 0 0 30px 10px;
     max-width: 95%;
 }
-
 .gallery-text > h3 {
     padding-bottom: 10px;
     text-transform: uppercase;
     font-weight: 800;
     text-align: center;
 }
-
 .gallery-text > p {
     font-weight: 700;
 
@@ -308,7 +312,7 @@ footer {
     color: brown;
 }
 
-/*--------------------------------- sending form --------------------------------*/
+/*------------------------------- SENDING PROCESS  ------------------------------*/
 
 .form-box {
     position: relative;
@@ -329,14 +333,14 @@ footer {
     opacity: 1;
     visibility: visible;
 }
-
 .form-box._sending::after {
     opacity: 1;
     visibility: visible;
     transition: all 0.5s ease 0s;
 }
 
-/*--------------------------------------------------------*/
+/*------------------------------ SENDING PROCESS - END ---------------------------*/
+
 .form-title {
     font-size: 30px;
     font-weight: 800;
@@ -410,8 +414,8 @@ textarea.form-input {
     border-radius: 4px;
     transform: scale(0);
     transition: transform 0.5s ease 0s;
-
 }
+
 /*--------------------------- CSS checkbox END -----------------------*/
 
 .form-button {
@@ -476,7 +480,6 @@ textarea.form-input {
     flex: 1 1 auto;
     margin: 70px auto 0;
 }
-
 .menu-box {
     display: flex;
     margin-top: 20px;
@@ -487,7 +490,6 @@ textarea.form-input {
     padding: 5% 0 5% 0;
     border-radius: 15px;
 }
-
 .menu-content > h4 {
     text-align: center;
     text-transform: uppercase;
@@ -567,16 +569,17 @@ list-style-type: none;
      justify-content: space-around;
      text-align: center;
     }
-    .index-column-item > h4 {
-        font-size: 18px;
-        font-weight: 700;
-    }
     .container > h2 {
-     font-size: 22px;
-     font-weight: 800;
-     letter-spacing: 0.1rem;
+        font-size: 20px;
+        letter-spacing: 0.1rem;
     }
-
+    .index-column-item > h4 {
+        font-size: 17px;
+    }
+    .index-column-item > p {
+        font-size: 15px;
+    }
+    
     /* ------------------------------ gallery file ---------------------------- */
 
     .dishes {
@@ -655,8 +658,11 @@ list-style-type: none;
        
      /*---------------------- three columns - index file ---------------------*/
 
-       .index-column-item-text {
-        font-size: 15px;
+    .index-column-item > h4 {
+        font-weight: 800;
+    }
+    .index-column-item > p {
+        font-size: 18px;
     }
 
     /* ---------------------------- gallery file --------------------------- */
