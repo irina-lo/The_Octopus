@@ -296,27 +296,27 @@ footer {
 
 }
 
-/*------------------------------------ form --------------------------------*/
+/*---------------------------------- F O R M --------------------------------*/
+
 .form-container {
     background-color: burlywood;
     height: 100%;
+    position: relative;
 }
 .form *{
     outline: none;
 }
 .form {
     background-color: burlywood;
-    padding-top: 30px;
-    max-width: 70%;
+    max-width: 80%;
     margin: 0 auto;
     color: brown;
 }
 
 /*------------------------------- SENDING PROCESS  ------------------------------*/
 
-.form-box {
-    position: relative;
-}
+/*-- to see the sending process comment out the lines 17-30 in the contactUs.js --*/
+
 .form-box::after {
     content: '';
     position: absolute;
@@ -342,9 +342,9 @@ footer {
 /*------------------------------ SENDING PROCESS - END ---------------------------*/
 
 .form-title {
-    font-size: 30px;
+    font-size: 24px;
     font-weight: 800;
-    margin: 50px 0 30px 0;
+    margin: 0 auto;
     text-transform: uppercase;
     text-align: center;
     letter-spacing: 0.1rem;
@@ -437,6 +437,7 @@ textarea.form-input {
 }
 .form-button:hover {
     background-color: #4f6146;
+    top:3px;
 }
 .form-button:active {
     top:3px;
@@ -446,7 +447,7 @@ textarea.form-input {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 30px;
+    min-height: 40px;
     background-color: gray;
     color: white;
     font-size: 15px;
@@ -460,7 +461,6 @@ textarea.form-input {
     text-decoration: none;
     transition: background-color 0.5s ease 0s;
     position: relative;
-    top:0;
     }
 .exit:hover {
     background-color: rgb(75, 75, 75);
@@ -625,6 +625,13 @@ list-style-type: none;
         font-size: 17px;
         line-height: 2.2rem;
     }
+
+    /*--------------------------- contact form ------------------------*/
+
+    form {
+        max-width: 70%;
+        margin: 0 auto;
+    }
 }
 
  /* ------------------------- viewport 1024px and higher ------------------------- */
@@ -703,9 +710,8 @@ list-style-type: none;
     /*--------------------------- contact form ------------------------*/
  
     form {
-        max-width: 60%;
+        max-width: 50%;
         margin: 0 auto;
-        padding-top: 80px;
     }
 }
   
