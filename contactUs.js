@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
             form.classList.remove('_sending');
         }
         else {
-            alert("Oops! I haven`t learned back-end yet :) ");
+            alert("Oops! I haven't learned back end yet :) Please come back later");
             form.classList.remove('_sending');
         }
     } 
